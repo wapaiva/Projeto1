@@ -1,0 +1,3 @@
+import { z } from 'zod';
+export const contactSchema=z.object({name:z.string().trim().min(3,'Informe seu nome completo.').max(120),email:z.string().trim().email('Informe um e-mail válido.').max(180),phone:z.string().trim().regex(/^[+()\d\s-]{10,25}$/,'Informe um telefone válido com DDD.'),city:z.string().trim().min(2).max(100),state:z.string().length(2),service:z.string().min(2).max(120),message:z.string().trim().min(15,'Descreva sua necessidade com pelo menos 15 caracteres.').max(4000),consent:z.literal(true),website:z.string().max(0),details:z.record(z.string().max(500)).default({})});
+export type ContactInput=z.infer<typeof contactSchema>;
