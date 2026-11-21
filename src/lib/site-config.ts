@@ -1,7 +1,7 @@
 export const siteConfig = {
  name: 'RIGORIUM ENGENHARIA', signature: 'PRECISÃO • CONFIANÇA • EXCELÊNCIA',
  whatsapp: '5500000000000', whatsappEnabled: false, // Número ilustrativo: substituir e ativar somente com número oficial.
- email: null as string | null, address: null as string | null, hours: null as string | null,
+ email: 'rigoriumengenharia@gmail.com' as string | null, address: null as string | null, hours: null as string | null,
  cnpj: null as string | null, legalName: null as string | null, crea: null as string | null,
  technicalManager: null as string | null, professionalRegistration: null as string | null,
  canonicalOrigin: null as string | null,
