@@ -10,33 +10,192 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AEmpresaRouteImport } from './routes/a-empresa'
+import { Route as AreasDeAtuacaoRouteImport } from './routes/areas-de-atuacao'
+import { Route as AvisoAssistenteVirtualRouteImport } from './routes/aviso-assistente-virtual'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ConteudosTecnicosRouteImport } from './routes/conteudos-tecnicos'
+import { Route as MissaoVisaoValoresRouteImport } from './routes/missao-visao-valores'
+import { Route as PerguntasFrequentesRouteImport } from './routes/perguntas-frequentes'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AEmpresaRoute = AEmpresaRouteImport.update({
+  id: '/a-empresa',
+  path: '/a-empresa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasDeAtuacaoRoute = AreasDeAtuacaoRouteImport.update({
+  id: '/areas-de-atuacao',
+  path: '/areas-de-atuacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvisoAssistenteVirtualRoute = AvisoAssistenteVirtualRouteImport.update({
+  id: '/aviso-assistente-virtual',
+  path: '/aviso-assistente-virtual',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConteudosTecnicosRoute = ConteudosTecnicosRouteImport.update({
+  id: '/conteudos-tecnicos',
+  path: '/conteudos-tecnicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissaoVisaoValoresRoute = MissaoVisaoValoresRouteImport.update({
+  id: '/missao-visao-valores',
+  path: '/missao-visao-valores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerguntasFrequentesRoute = PerguntasFrequentesRouteImport.update({
+  id: '/perguntas-frequentes',
+  path: '/perguntas-frequentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosRoute = ServicosRouteImport.update({
+  id: '/servicos',
+  path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosSlugRoute = ServicosSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ServicosRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-empresa': typeof AEmpresaRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/aviso-assistente-virtual': typeof AvisoAssistenteVirtualRoute
+  '/contato': typeof ContatoRoute
+  '/conteudos-tecnicos': typeof ConteudosTecnicosRoute
+  '/missao-visao-valores': typeof MissaoVisaoValoresRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/servicos': typeof ServicosRouteWithChildren
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-empresa': typeof AEmpresaRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/aviso-assistente-virtual': typeof AvisoAssistenteVirtualRoute
+  '/contato': typeof ContatoRoute
+  '/conteudos-tecnicos': typeof ConteudosTecnicosRoute
+  '/missao-visao-valores': typeof MissaoVisaoValoresRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/servicos': typeof ServicosRouteWithChildren
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-empresa': typeof AEmpresaRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/aviso-assistente-virtual': typeof AvisoAssistenteVirtualRoute
+  '/contato': typeof ContatoRoute
+  '/conteudos-tecnicos': typeof ConteudosTecnicosRoute
+  '/missao-visao-valores': typeof MissaoVisaoValoresRoute
+  '/perguntas-frequentes': typeof PerguntasFrequentesRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/servicos': typeof ServicosRouteWithChildren
+  '/termos-de-uso': typeof TermosDeUsoRoute
+  '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/a-empresa'
+    | '/areas-de-atuacao'
+    | '/aviso-assistente-virtual'
+    | '/contato'
+    | '/conteudos-tecnicos'
+    | '/missao-visao-valores'
+    | '/perguntas-frequentes'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/servicos'
+    | '/termos-de-uso'
+    | '/servicos/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/a-empresa'
+    | '/areas-de-atuacao'
+    | '/aviso-assistente-virtual'
+    | '/contato'
+    | '/conteudos-tecnicos'
+    | '/missao-visao-valores'
+    | '/perguntas-frequentes'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/servicos'
+    | '/termos-de-uso'
+    | '/servicos/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-empresa'
+    | '/areas-de-atuacao'
+    | '/aviso-assistente-virtual'
+    | '/contato'
+    | '/conteudos-tecnicos'
+    | '/missao-visao-valores'
+    | '/perguntas-frequentes'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/servicos'
+    | '/termos-de-uso'
+    | '/servicos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AEmpresaRoute: typeof AEmpresaRoute
+  AreasDeAtuacaoRoute: typeof AreasDeAtuacaoRoute
+  AvisoAssistenteVirtualRoute: typeof AvisoAssistenteVirtualRoute
+  ContatoRoute: typeof ContatoRoute
+  ConteudosTecnicosRoute: typeof ConteudosTecnicosRoute
+  MissaoVisaoValoresRoute: typeof MissaoVisaoValoresRoute
+  PerguntasFrequentesRoute: typeof PerguntasFrequentesRoute
+  PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  ServicosRoute: typeof ServicosRouteWithChildren
+  TermosDeUsoRoute: typeof TermosDeUsoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +207,118 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-empresa': {
+      id: '/a-empresa'
+      path: '/a-empresa'
+      fullPath: '/a-empresa'
+      preLoaderRoute: typeof AEmpresaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-de-atuacao': {
+      id: '/areas-de-atuacao'
+      path: '/areas-de-atuacao'
+      fullPath: '/areas-de-atuacao'
+      preLoaderRoute: typeof AreasDeAtuacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aviso-assistente-virtual': {
+      id: '/aviso-assistente-virtual'
+      path: '/aviso-assistente-virtual'
+      fullPath: '/aviso-assistente-virtual'
+      preLoaderRoute: typeof AvisoAssistenteVirtualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conteudos-tecnicos': {
+      id: '/conteudos-tecnicos'
+      path: '/conteudos-tecnicos'
+      fullPath: '/conteudos-tecnicos'
+      preLoaderRoute: typeof ConteudosTecnicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/missao-visao-valores': {
+      id: '/missao-visao-valores'
+      path: '/missao-visao-valores'
+      fullPath: '/missao-visao-valores'
+      preLoaderRoute: typeof MissaoVisaoValoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perguntas-frequentes': {
+      id: '/perguntas-frequentes'
+      path: '/perguntas-frequentes'
+      fullPath: '/perguntas-frequentes'
+      preLoaderRoute: typeof PerguntasFrequentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos': {
+      id: '/servicos'
+      path: '/servicos'
+      fullPath: '/servicos'
+      preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos/$slug': {
+      id: '/servicos/$slug'
+      path: '/$slug'
+      fullPath: '/servicos/$slug'
+      preLoaderRoute: typeof ServicosSlugRouteImport
+      parentRoute: typeof ServicosRoute
+    }
   }
 }
 
+interface ServicosRouteChildren {
+  ServicosSlugRoute: typeof ServicosSlugRoute
+}
+
+const ServicosRouteChildren: ServicosRouteChildren = {
+  ServicosSlugRoute: ServicosSlugRoute,
+}
+
+const ServicosRouteWithChildren = ServicosRoute._addFileChildren(
+  ServicosRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AEmpresaRoute: AEmpresaRoute,
+  AreasDeAtuacaoRoute: AreasDeAtuacaoRoute,
+  AvisoAssistenteVirtualRoute: AvisoAssistenteVirtualRoute,
+  ContatoRoute: ContatoRoute,
+  ConteudosTecnicosRoute: ConteudosTecnicosRoute,
+  MissaoVisaoValoresRoute: MissaoVisaoValoresRoute,
+  PerguntasFrequentesRoute: PerguntasFrequentesRoute,
+  PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  ServicosRoute: ServicosRouteWithChildren,
+  TermosDeUsoRoute: TermosDeUsoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
